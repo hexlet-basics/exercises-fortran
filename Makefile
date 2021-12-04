@@ -8,6 +8,9 @@ compose:
 compose-build:
 	docker-compose build
 
+compose-bash:
+	docker-compose run exercises bash
+
 code-lint:
 	# java -jar /opt/checkstyle.jar -c checkstyle.xml modules src
 
@@ -17,9 +20,5 @@ code-lint:
 # clean:
 #   @$$(find . -type f -name *.class -delete)
 
-compose-bash:
-	docker-compose run exercises bash
-
 compose-test:
 	docker-compose run exercises make test
-

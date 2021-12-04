@@ -7,6 +7,9 @@ RUN unzip -qd /naturalFRUIT naturalFRUIT.zip
 RUN mkdir /usr/local/lib/fortran
 RUN cd /usr/local/lib/fortran && gfortran -c /naturalFRUIT/src-zip/src/naturalfruit.f90
 
+# TODO: желательно заменить этот линтер. Проверяет как-то выборочно.
+RUN pip install fortran-linter
+
 WORKDIR /exercises-fortran
 
 COPY . .

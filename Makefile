@@ -18,7 +18,7 @@ compose-code-lint:
 	docker-compose run exercises make code-lint
 
 code-lint:
-	echo "code-lint"
+	@(for i in $$(find modules -type f -name Makefile); do fortran-linter $$(dirname $$i)/*.f90 --syntax-only; done)
 
 compose-description-lint:
 	docker-compose run exercises make description-lint

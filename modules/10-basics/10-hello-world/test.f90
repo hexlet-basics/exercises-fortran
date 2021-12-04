@@ -10,7 +10,7 @@ program testrunner
 
   open(6, file=filename)
   do
-    read(6, '(a)', iostat=ios) actual
+    read(6, '(a)', iostat = ios) actual
     if (ios /= 0) exit
   end do
   close(6)

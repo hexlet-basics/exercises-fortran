@@ -1,6 +1,6 @@
 FROM hexletbasics/base-image:latest
 
-RUN apt-get update && apt-get install -y gfortran cmake m4
+RUN apt-get update && apt-get install -y gfortran
 
 RUN wget -q https://github.com/cibinjoseph/naturalFRUIT/releases/download/v0.7.4/naturalFRUIT.zip
 RUN unzip -qd /naturalFRUIT naturalFRUIT.zip

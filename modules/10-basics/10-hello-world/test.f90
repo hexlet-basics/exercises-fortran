@@ -18,10 +18,13 @@ program testrunner
   open(6, file='/dev/stdout')
   ! ---------------------
 
+  call testcase_initialize()
+
   call set_case_name('base test')
   call assert_equal('Hello World!', actual)
 
   call testsuite_summary()
+  call testsuite_finalize(exit_code)
   call exit(exit_code)
 
 end program testrunner

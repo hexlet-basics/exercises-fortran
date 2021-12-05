@@ -1,4 +1,4 @@
-program testrunner
+program test
   use naturalfruit
   integer :: exit_code, ios
   character(100) :: actual, filename='stdout'
@@ -18,7 +18,7 @@ program testrunner
   open(6, file='/dev/stdout')
   ! ---------------------
 
-  call testcase_initialize()
+  call testsuite_initialize()
 
   call set_case_name('base test')
   call assert_equal('Hello World!', actual)
@@ -27,4 +27,4 @@ program testrunner
   call testsuite_finalize(exit_code)
   call exit(exit_code)
 
-end program testrunner
+end program test

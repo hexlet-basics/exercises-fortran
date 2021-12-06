@@ -23,7 +23,7 @@ contains
     ! ---------------------
 
     call set_case_name('base test')
-    call assert_equal('Hello World!', actual)
+    call assert_equal('Hello, World!', actual)
   end subroutine test
 
 end module tests

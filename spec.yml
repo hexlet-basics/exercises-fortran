@@ -1,7 +1,7 @@
 ---
 
 language:
-  docker_image: "hexletbasics/exercises-fortran"
+  docker_image: "ghcr.io/hexlet-basics/exercises-fortran"
   extension: f90
   exercise_filename: solution.f90
   exercise_test_filename: test.f90
